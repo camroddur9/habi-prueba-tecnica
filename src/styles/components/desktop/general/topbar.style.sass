@@ -1,0 +1,55 @@
+@import ./../../variables.style
+
+.topbar-main
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 11%
+    background: #FFFFFF 0% 0% no-repeat padding-box
+    box-shadow: 0px 3px 6px #00000029
+
+.logo-container
+    position: absolute
+    width: 5%
+    height: 80%
+    left: 2%
+    top: 50%
+    transform: translate(0%,-50%)
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+        max-height: 100%
+        min-height: 100%
+        max-width: 100%
+        min-width: 100%
+        object-fit: contain
+
+.progress-bar-container
+    position: absolute
+    width: 30%
+    left: 50%
+    top: 20%
+    height: 20%
+    border-radius: 20px
+    border:1px solid rgb(124, 1, 255)
+    transform: translate(-50%,0%)
+
+.progress-bar-inside
+    position: absolute
+    top: 0
+    left: 0
+    border-radius: 20px
+    height: 100%
+    background-color: rgb(176, 103, 255)
+    transition: width 0.2s ease-in-out
+
+.step-counter
+    position: absolute
+    top: 70%
+    left: 50%
+    transform: translate(-50%,-50%)
+    font-size: 1.2rem
+    font-family: $font-family-semibold
+    color: rgb(37, 33, 41)

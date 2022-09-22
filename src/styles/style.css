@@ -1,0 +1,738 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.information-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-out {
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.fade-in {
+  pointer-events: all;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+@font-face {
+  font-family: "Suprema Regular";
+  src: url(./fonts/SupremaRegular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Suprema SemiBold";
+  src: url(./fonts/SupremaSemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Suprema Bold";
+  src: url(./fonts/SupremaBold.ttf) format("truetype");
+}
+.main-layout-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d6f3ff 0% 0% no-repeat padding-box;
+}
+
+.layout-see-summary {
+  display: none;
+}
+
+.entry-main-component {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff 0% 0% no-repeat padding-box;
+  box-shadow: 3px 0px 20px #00000029;
+}
+
+.logo-habi {
+  position: absolute;
+  width: 10%;
+  min-width: 200px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.entry-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-family: "Suprema SemiBold";
+  color: #252129;
+}
+
+.ingresar-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: #7c01ff;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+  width: 25%;
+  height: 5%;
+  font-family: "Suprema Regular";
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ingresar-btn:hover {
+  background-color: #b067ff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.topbar-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 11%;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.logo-container {
+  position: absolute;
+  width: 5%;
+  height: 80%;
+  left: 2%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-container img {
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  object-fit: contain;
+}
+
+.progress-bar-container {
+  position: absolute;
+  width: 30%;
+  left: 50%;
+  top: 20%;
+  height: 20%;
+  border-radius: 20px;
+  border: 1px solid #7c01ff;
+  transform: translate(-50%, 0%);
+}
+
+.progress-bar-inside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  height: 100%;
+  background-color: #b067ff;
+  transition: width 0.2s ease-in-out;
+}
+
+.step-counter {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-family: "Suprema SemiBold";
+  color: #252129;
+}
+
+.datos-cliente-main {
+  position: absolute;
+  top: 11%;
+  height: 89%;
+  width: 50%;
+  left: 0;
+  background: #F5F5F5 0% 0% no-repeat padding-box;
+  box-shadow: 3px 0px 20px #00000029;
+}
+
+.datos-cliente-description {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 1.5rem;
+  font-family: "Suprema SemiBold";
+  color: #252129;
+  text-align: center;
+}
+
+.datos-cliente-input-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 90%;
+}
+
+.name-input {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 70%;
+  height: 5%;
+}
+
+.submit-btn {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 25%;
+  height: 10%;
+  border-radius: 100px;
+  background-color: #7c01ff;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Suprema SemiBold";
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-btn:disabled {
+  background-color: #c0bfc2;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-btn:hover:enabled {
+  background-color: #b067ff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.temp-summary-main {
+  position: absolute;
+  top: 11%;
+  height: 89%;
+  width: 50%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp-summary-main-final {
+  position: absolute;
+  top: 18%;
+  height: 80%;
+  width: 100%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp-section-container {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  border: 2px solid #7c01ff;
+  border-radius: 13px;
+  box-shadow: 0px 3px 6px rgba(176, 103, 255, 0.6);
+}
+
+.temp-summary-title {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #7c01ff;
+  font-family: "Suprema SemiBold";
+  font-size: 1.3rem;
+}
+
+.temp-summary-container {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  padding: 1vh;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.temp-summary-detailed-container {
+  position: relative;
+  top: 5%;
+  margin-bottom: 6%;
+}
+
+.temp-summary-detail-title {
+  left: 50%;
+  transform: translate(-50% 0%);
+  color: #7c01ff;
+  font-family: "Suprema SemiBold";
+  font-size: 1.15rem;
+  margin-bottom: 2%;
+}
+
+.temp-summary-detail-text {
+  word-wrap: break-word;
+  left: 50%;
+  transform: translate(-50% 0%);
+  color: #7c01ff;
+  font-family: "Suprema Regular";
+  font-size: 1rem;
+}
+
+.mobile-hide-summary {
+  display: none;
+}
+
+.address-selection-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.select-department-info {
+  position: absolute;
+  width: 45%;
+  height: 20%;
+  left: 2.5%;
+  top: 10%;
+}
+.select-department-info p {
+  font-family: "Suprema SemiBold";
+  font-size: 1.15rem;
+  margin-bottom: 5%;
+}
+.select-department-info select {
+  width: 100%;
+  height: 30%;
+}
+
+.select-municipality-info {
+  position: absolute;
+  width: 45%;
+  height: 20%;
+  right: 2.5%;
+  top: 10%;
+}
+.select-municipality-info p {
+  font-family: "Suprema SemiBold";
+  font-size: 1.15rem;
+  margin-bottom: 5%;
+}
+.select-municipality-info select {
+  width: 100%;
+  height: 30%;
+}
+
+.select-address {
+  position: absolute;
+  top: 35%;
+  width: 95%;
+  height: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.select-address p {
+  font-family: "Suprema SemiBold";
+  font-size: 1.15rem;
+  margin-bottom: 3%;
+}
+.select-address input {
+  width: 100%;
+  height: 30%;
+}
+
+.address-submit-btn {
+  top: 80%;
+}
+
+.amenities-container {
+  position: absolute;
+  height: 50%;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.amenities-text {
+  font-size: 1.15rem;
+  font-family: "Suprema SemiBold";
+  color: #252129;
+}
+
+.amenities-checkbox-container {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  width: 100%;
+  max-height: 50%;
+  height: auto;
+  transform: translate(-50%, 0%);
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  overflow-y: auto;
+  border: 1px solid #BEBEBE;
+}
+
+.amenitie-individual-container {
+  position: relative;
+  height: 6vh;
+  border: 1px solid #BEBEBE;
+  border-radius: 4px;
+  margin: 2vh;
+}
+.amenitie-individual-container label {
+  width: 40%;
+  position: absolute;
+  font-family: "Suprema SemiBold";
+  font-size: 1rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.amenitie-individual-container input {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  width: 3vh;
+  height: 3vh;
+  transform: translate(0, -50%);
+}
+
+input[type=checkbox]:checked {
+  background-color: #7c01ff;
+  accent-color: #7c01ff;
+}
+
+@media only screen and (orientation: landscape) and (max-width: 900px) {
+  .logo-habi {
+    width: 5%;
+    max-width: 100px;
+    min-width: 100px;
+  }
+
+  .entry-description {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .ingresar-btn {
+    top: 75%;
+    font-size: 1rem;
+    height: 10%;
+    width: 30%;
+  }
+
+  .topbar-main {
+    height: 15%;
+  }
+
+  .step-counter {
+    top: 75%;
+    font-size: 0.85rem;
+  }
+
+  .datos-cliente-main {
+    top: 15%;
+    height: 85%;
+  }
+
+  .datos-cliente-description {
+    top: 6%;
+    font-size: 0.9rem;
+    width: 90%;
+  }
+
+  .name-input {
+    height: 10%;
+  }
+
+  .submit-btn {
+    text-align: center;
+    top: 50%;
+    width: 40%;
+    font-size: 0.85rem;
+    height: 20%;
+  }
+
+  .temp-summary-title {
+    top: 10%;
+    font-size: 0.85rem;
+    text-align: center;
+    width: 80%;
+  }
+
+  .temp-summary-detailed-container {
+    top: 8%;
+  }
+
+  .temp-summary-detail-title {
+    font-size: 0.75rem;
+  }
+
+  .temp-summary-detail-text {
+    font-size: 0.65rem;
+  }
+
+  .temp-summary-container {
+    height: 75%;
+    top: 12.5%;
+    transform: translate(-50%, 0);
+  }
+
+  .select-department-info p {
+    font-size: 0.85rem;
+  }
+  .select-department-info select {
+    height: 50%;
+  }
+
+  .select-municipality-info p {
+    font-size: 0.85rem;
+  }
+  .select-municipality-info select {
+    height: 50%;
+  }
+
+  .select-address {
+    top: 55%;
+  }
+  .select-address p {
+    font-size: 0.85rem;
+  }
+  .select-address select {
+    height: 50%;
+  }
+
+  .address-submit-btn {
+    top: 90%;
+    height: 15%;
+    text-align: center;
+    width: 45%;
+    font-size: 0.75rem;
+  }
+
+  .amenities-text {
+    font-size: 0.85rem;
+  }
+
+  .amenities-container {
+    top: 60%;
+    height: 65%;
+    width: 75%;
+  }
+
+  .amenities-checkbox-container {
+    max-height: 60%;
+  }
+
+  .amenitie-individual-container {
+    height: 10vh;
+  }
+  .amenitie-individual-container label {
+    font-size: 0.65rem;
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 450px) and (orientation: portrait) {
+  .entry-main-component {
+    width: 100%;
+    background: linear-gradient(45deg, #fff, #fff 45%, #d6f3ff 80%, #d6f3ff 75%);
+  }
+
+  .logo-habi {
+    min-width: 120px;
+    width: 15%;
+  }
+
+  .entry-description {
+    width: 80%;
+    font-size: 1.25rem;
+  }
+
+  .ingresar-btn {
+    width: 45%;
+    height: 8%;
+    font-size: 1.1rem;
+  }
+
+  .temp-summary-main {
+    width: 100%;
+    background-color: #d6f3ff;
+    align-items: flex-start;
+  }
+
+  .temp-section-container {
+    margin-top: 8%;
+    width: 80%;
+    height: 80%;
+  }
+
+  .temp-summary-title {
+    width: 80%;
+    text-align: center;
+  }
+
+  .mobile-hide-summary {
+    position: absolute;
+    display: block;
+    bottom: 2%;
+    color: #7c01ff;
+    font-family: "Suprema SemiBold";
+    font-size: 1rem;
+    border: 2px solid #7c01ff;
+    height: 7%;
+    width: 60%;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .datos-cliente-main {
+    width: 100%;
+  }
+
+  .logo-container {
+    width: 10%;
+  }
+
+  .progress-bar-container {
+    width: 50%;
+  }
+
+  .step-counter {
+    font-size: 1rem;
+  }
+
+  .layout-see-summary {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    color: #7c01ff;
+    font-family: "Suprema SemiBold";
+    font-size: 1rem;
+    border: 2px solid #7c01ff;
+    height: 6%;
+    width: 60%;
+    border-radius: 100px;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .datos-cliente-description {
+    width: 70%;
+    font-size: 1.2rem;
+  }
+
+  .name-input {
+    height: 10%;
+  }
+
+  .submit-btn {
+    width: 40%;
+    height: 12%;
+  }
+
+  .address-selection-container {
+    width: 85%;
+  }
+
+  .select-department-info p {
+    font-size: 1rem;
+  }
+
+  .select-municipality-info p {
+    font-size: 1rem;
+  }
+
+  .select-address {
+    top: 40%;
+  }
+  .select-address p {
+    font-size: 1rem;
+  }
+
+  .amenities-container {
+    width: 85%;
+  }
+
+  .amenitie-individual-container {
+    margin: 1vh;
+    height: 8vh;
+    max-height: 60%;
+  }
+  .amenitie-individual-container label {
+    width: 60%;
+    left: 40%;
+    font-size: 0.85rem;
+  }
+
+  .address-submit-btn {
+    width: 45%;
+    height: 13%;
+    border-radius: 100px;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
